@@ -1,41 +1,44 @@
-/* Grouping selector: center h1 and h2 text */
+/* Grouping selector: center h1 and h2 text, change font size and color */
 h1, h2 {
     text-align: center;
-    font-size: 32px; /* Change font-size */
-    color: darkblue; /* Change text color */
+    font-size: 32px;
+    color: darkblue;
 }
 
-/* Center an image */
+/* Change background color of the body */
+body {
+    background-color: #f0f0f0; /* light gray */
+    font-family: Arial, sans-serif;
+}
+
+/* Center the image */
 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%; /* Optional: shrink image */
+    width: 50%; /* optional resize */
 }
 
-/* Change background color of body */
-body {
-    background-color: #f0f8ff; /* Light blue background */
+/* Combined selector: section with class 'highlight' */
+section.highlight {
+    background-color: #fff8dc; /* cornsilk background */
+    padding: 10px;
+    border: 1px solid #ddd;
 }
 
-/* Combined selector: div with class 'link' */
-div.link {
-    font-size: 18px;
-    color: darkgreen;
-}
-
-/* Combined selector: element with both link and link-active classes */
-.link.link-active {
+/* Combined selector: element with both 'nav' and 'main-nav' classes */
+.nav.main-nav {
     font-weight: bold;
-    color: red;
+    color: darkred;
 }
 
-/* CSS combinator: any .link directly inside header */
-header > .link {
+/* CSS combinator: direct child link inside header */
+header > nav > ul > li > a {
     text-decoration: underline;
 }
 
-/* CSS combinator: any .link inside a div (anywhere) */
-div .link {
-    background-color: #ffe4e1; /* Light pink background */
+/* CSS combinator: any link inside a section */
+section a {
+    color: teal;
+    font-size: 18px;
 }
